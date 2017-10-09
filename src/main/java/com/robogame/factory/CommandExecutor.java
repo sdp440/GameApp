@@ -26,7 +26,7 @@ public class CommandExecutor {
 		CommandFactory cmdFactory = new CommandFactory();
 		try {
 			Position position = cmdFactory.getCommandExecutor(inputCmdAry[GameConstants.ZERO]);
-			String inputCoordinates = (inputCmdAry.length>GameConstants.ONE) ? inputCmdAry[GameConstants.ONE]:"";
+			String inputCoordinates = (inputCmdAry.length>GameConstants.ONE) ? inputCmdAry[GameConstants.ONE]:GameConstants.EMPTY;
 			toContinue = position.executeCommand(inputCoordinates, positionSetup);
 		} catch (CustomException exception) {
 			//Do Nothing for Invalid commands and continue.
